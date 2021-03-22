@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="GoodFood.SiteMaster" %>
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <asp:ContentPlaceHolder ID="headContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link href="Styles/CSS/main.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#006699 !important;">
+            <a class="navbar-brand" href="/Pages/Home.aspx">GoodFood Application</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Pages/Home.aspx">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="BasicDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Basic Forms
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="BasicDropdownMenuLink">
+                            <a class="dropdown-item" href="/Pages/Basic_Forms/Customers.aspx">Customers</a>
+                            <a class="dropdown-item" href="/Pages/Basic_Forms/Dishes.aspx">Dishes</a>
+                            <a class="dropdown-item" href="/Pages/Basic_Forms/LoyaltyPoints.aspx">Loyalty Points</a>
+                            <a class="dropdown-item" href="/Pages/Basic_Forms/Address.aspx">Addresses</a>
+                            <a class="dropdown-item" href="/Pages/Basic_Forms/Restaurants.aspx">Restaurants</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="ComplexDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Complex Forms
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="ComplexDropdownMenuLink">
+                            <a class="dropdown-item" href="/Pages/Complex_Forms/CustomerOrder.aspx">Customer-Order</a>
+                            <a class="dropdown-item" href="/Pages/Complex_Forms/DishDetails.aspx">Dish Details</a>
+                            <a class="dropdown-item" href="/Pages/Complex_Forms/OrderDetails.aspx">Order Details</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+    <div class="container body">
+        <asp:ContentPlaceHolder ID="bodyContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <footer>
+        <center><p>&copy; <%: DateTime.Now.Year %> All right reserved. Designed by <i><a href="https://binitkoirala.com.np">Binit Koirala</a></i></p></center>
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="JSContent" runat="server">
+        </asp:ContentPlaceHolder>
+
+</body>
+</html>
